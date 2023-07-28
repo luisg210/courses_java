@@ -86,18 +86,6 @@ public class SecurityConfig {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
-    //Recibe user autenticado
-    /*@Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails userDetails = User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("1234")
-                .roles("USER")
-                .build();
-
-        return new InMemoryUserDetailsManager(userDetails);
-    }*/
-
     //Se registran clientes
     @Bean
     public RegisteredClientRepository registeredClientRepository() {
